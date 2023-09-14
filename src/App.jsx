@@ -1,5 +1,6 @@
 
 import './App.css'
+import Courses from './component/courses/Courses'
 
 function App() {
 
@@ -8,6 +9,7 @@ function App() {
     <>
 
       <h1 className='text-4xl'>Vite + React</h1>
+      <Courses></Courses>
 
     </>
   )
