@@ -1,11 +1,11 @@
 import { BsBook,BsCurrencyDollar } from 'react-icons/bs';
 import PropTypes from 'prop-types'
 
-const Course = ({course}) => {
-    const {id,image,title,description,price,credit} =course
+const Course = ({course,handlerSelect}) => {
+    const {image,title,description,price,credit} =course
   return (
     <div>
-      <div className="card bg-base-100 shadow-2xl p-6">
+      <div className="card bg-base-100 shadow-2xl p-5">
         <figure className='pb-3'>
           <img
             src={image}
@@ -29,7 +29,7 @@ const Course = ({course}) => {
             <p className='text-gray-500 font-medium'>Credit :{credit}hr</p>      
             </div>
           </div>
-          <button className="btn btn-info w-full text-white text-lg hover:bg-sky-700">Select</button>
+          <button onClick={()=>handlerSelect(course)} className="btn btn-info w-full text-white text-lg hover:bg-sky-700">Select</button>
         </div>
       </div>
     </div>
@@ -38,5 +38,6 @@ const Course = ({course}) => {
 
 Course.propTypes={
     course: PropTypes.object.isRequired,
+    handlerSelect:PropTypes.func.isRequired
 }
 export default Course;

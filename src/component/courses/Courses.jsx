@@ -2,7 +2,9 @@ import PropTypes from "prop-types";
 import { useEffect } from "react";
 import { useState } from "react";
 import Course from "../course/Course";
-const Courses = () => {
+
+
+const Courses = ({handlerSelect}) => {
   const [courses, setCourses] = useState([]);
 
   useEffect(() => {
@@ -12,14 +14,18 @@ const Courses = () => {
   }, []);
   return (
     <div className="w-3/4">
-      <h1 className="text-4xl">Courses:{courses.length}</h1>
       <div className="grid grid-cols-3 gap-6">
         {courses.map((course) => (
-          <Course key={course.id} course={course}></Course>
+          <Course
+          handlerSelect={handlerSelect}
+          key={course.id} 
+          course={course}></Course>
         ))}
       </div>
     </div>
   );
 };
-Courses.propTypes = {};
+Courses.propTypes = {
+  handlerSelect:PropTypes.func.isRequired,
+};
 export default Courses;

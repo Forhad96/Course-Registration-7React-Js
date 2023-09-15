@@ -1,22 +1,86 @@
+import { useState } from "react";
+import "./App.css";
+import Cart from "./component/cart/Cart";
+import Courses from "./component/courses/Courses";
 
-import './App.css'
-import Cart from './component/cart/Cart'
-import Courses from './component/courses/Courses'
+// react-toastify
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
+  const [selectedCourses, setSelectedCourses] = useState([]);
+  const [totalCredits, setTotalCredits] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+  const [remainingCredits, setRemainingCredits] = useState(20);
 
+  // Select button handler for add course to cart
+  const handlerSelect = (course) => {
+    const isExist = selectedCourses.find(
+      (selectedCourse) => selectedCourse.id === course.id
+    );
+    if (isExist) {
+      return toast.error("⚠️Already added!", {
+        position: "top-center",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+    } else {
+      toast.info(` ✔ ${course.title}`, {
+        position: "top-right",
+        autoClose: 2000,
+        hideProgressBar: false,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        progress: undefined,
+        theme: "colored",
+      });
+      setSelectedCourses([...selectedCourses, course]);
+    }
+
+    // total credit
+    setTotalCredits(totalCredits + course.credit);
+
+    // set total price
+    setTotalPrice(totalPrice + course.price);
+
+    // set remaining
+    if(totalCredits >remainingCredits){
+      return alert('zero credits')
+    }
+    setRemainingCredits(remainingCredits - course.credit);
+  };
 
   return (
-    <div className='container mx-auto py-10'>
-
-      <h1 className='text-3xl text-center font-bold'>Course Registration</h1>
-      <div className='md:flex justify-between gap-6'>
-      <Courses></Courses>
-      <Cart></Cart>
+    <div className="container mx-auto py-10">
+      <h1 className="text-3xl text-center font-bold">Course Registration</h1>
+      <div className="md:flex justify-between gap-6">
+        <Courses handlerSelect={handlerSelect}></Courses>
+        <Cart
+          remainingCredits={remainingCredits}
+          totalCredits={totalCredits}
+          totalPrice={totalPrice}
+          selectedCourses={selectedCourses}></Cart>
       </div>
-
+      <ToastContainer
+        position="top-right"
+        autoClose={2000}
+        hideProgressBar={false}
+        newestOnTop={false}
+        closeOnClick
+        rtl={false}
+        pauseOnFocusLoss
+        draggable
+        pauseOnHover
+        theme="colored"
+      />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
