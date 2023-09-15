@@ -30,3 +30,13 @@ ol ::marker {
   font-weight: bold;
   grid-template-columns: repeat(auto-fit);
 }
+
+
+/* Custom styles for mobile devices */
+/* @media (max-width: 768px) {
+  .custom-toast {
+    font-size: 14px;
+    max-height: 70%;
+
+  }
+} */

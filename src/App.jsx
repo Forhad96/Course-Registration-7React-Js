@@ -31,9 +31,9 @@ function App() {
         theme: "colored",
       });
     } else {
-      if(remainingCredits - course.credit < 0){
+      if (remainingCredits - course.credit < 0) {
         // return alert('Warning: Your credit limit has been reached')
-        return toast.warn('Your credit limit has been reached!', {
+        return toast.warn("Your credit limit has been reached!", {
           position: "top-center",
           autoClose: 2000,
           hideProgressBar: false,
@@ -42,9 +42,8 @@ function App() {
           draggable: true,
           progress: undefined,
           theme: "dark",
-          });
-      }
-      else{
+        });
+      } else {
         toast.success(`${course.title}`, {
           position: "top-right",
           autoClose: 2000,
@@ -57,7 +56,6 @@ function App() {
         });
         setSelectedCourses([...selectedCourses, course]);
       }
-
     }
 
     // total credit
@@ -73,7 +71,11 @@ function App() {
 
   return (
     <div className="container mx-auto py-10">
-      <Header></Header>
+      <Header
+        remainingCredits={remainingCredits}
+        totalCredits={totalCredits}
+        totalPrice={totalPrice}
+        selectedCourses={selectedCourses}></Header>
       <h1 className="text-3xl text-center font-bold">Course Registration</h1>
       <div className="md:flex lg:justify-between gap-6">
         <Courses handlerSelect={handlerSelect}></Courses>
@@ -84,7 +86,7 @@ function App() {
           selectedCourses={selectedCourses}></Cart>
       </div>
       <ToastContainer
-        position="top-right"
+        position="top-left"
         autoClose={2000}
         hideProgressBar={false}
         newestOnTop={false}
@@ -94,6 +96,7 @@ function App() {
         draggable
         pauseOnHover
         theme="colored"
+        className="custom-toast"
       />
     </div>
   );
