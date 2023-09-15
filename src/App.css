@@ -28,4 +28,5 @@ https://i.ibb.co/gTbx2SR/course-9.png */
 
 ol ::marker {
   font-weight: bold;
+  grid-template-columns: repeat(auto-fit);
 }

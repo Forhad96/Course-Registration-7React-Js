@@ -6,6 +6,7 @@ import Courses from "./component/courses/Courses";
 // react-toastify
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Header from "./header/Header";
 
 function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
@@ -44,7 +45,7 @@ function App() {
           });
       }
       else{
-        toast.info(` ✔ ${course.title}`, {
+        toast.success(`${course.title}`, {
           position: "top-right",
           autoClose: 2000,
           hideProgressBar: false,
@@ -72,8 +73,9 @@ function App() {
 
   return (
     <div className="container mx-auto py-10">
+      <Header></Header>
       <h1 className="text-3xl text-center font-bold">Course Registration</h1>
-      <div className="md:flex justify-between gap-6">
+      <div className="md:flex lg:justify-between gap-6">
         <Courses handlerSelect={handlerSelect}></Courses>
         <Cart
           remainingCredits={remainingCredits}
