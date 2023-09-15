@@ -25,3 +25,7 @@ https://i.ibb.co/y0tL8Gj/course-6.png
 https://i.ibb.co/qsSkdmC/course-7.png
 https://i.ibb.co/yVDrLbP/course-8.png
 https://i.ibb.co/gTbx2SR/course-9.png */
+
+ol ::marker {
+  font-weight: bold;
+}

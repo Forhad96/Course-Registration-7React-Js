@@ -30,17 +30,33 @@ function App() {
         theme: "colored",
       });
     } else {
-      toast.info(` ✔ ${course.title}`, {
-        position: "top-right",
-        autoClose: 2000,
-        hideProgressBar: false,
-        closeOnClick: true,
-        pauseOnHover: true,
-        draggable: true,
-        progress: undefined,
-        theme: "colored",
-      });
-      setSelectedCourses([...selectedCourses, course]);
+      if(remainingCredits - course.credit < 0){
+        // return alert('Warning: Your credit limit has been reached')
+        return toast.warn('Your credit limit has been reached!', {
+          position: "top-center",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+          });
+      }
+      else{
+        toast.info(` ✔ ${course.title}`, {
+          position: "top-right",
+          autoClose: 2000,
+          hideProgressBar: false,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "colored",
+        });
+        setSelectedCourses([...selectedCourses, course]);
+      }
+
     }
 
     // total credit
@@ -50,9 +66,7 @@ function App() {
     setTotalPrice(totalPrice + course.price);
 
     // set remaining
-    if(totalCredits >remainingCredits){
-      return alert('zero credits')
-    }
+
     setRemainingCredits(remainingCredits - course.credit);
   };
 
