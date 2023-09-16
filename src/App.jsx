@@ -7,15 +7,13 @@ import Courses from "./component/courses/Courses";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./header/Header";
-import Test from "./component/Test";
-
 
 function App() {
   const [selectedCourses, setSelectedCourses] = useState([]);
   const [totalCredits, setTotalCredits] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
   const [remainingCredits, setRemainingCredits] = useState(20);
-  const [cartCount,setCartCount] =useState(0)
+  const [cartCount, setCartCount] = useState(0);
 
   // Select button handler for add course to cart
   const handlerSelect = (course) => {
@@ -70,11 +68,11 @@ function App() {
     // set remaining
     setRemainingCredits(remainingCredits - course.credit);
     // set cart count
-    setCartCount(cartCount + 1)
+    setCartCount(cartCount + 1);
   };
 
   return (
-    <div className="container mx-auto py-10">
+    <div className="container mx-auto py-5">
       <Header
         cartCount={cartCount}
         remainingCredits={remainingCredits}
@@ -90,7 +88,6 @@ function App() {
           totalPrice={totalPrice}
           selectedCourses={selectedCourses}></Cart>
       </div>
-      <Test></Test>
       <ToastContainer
         position="top-left"
         autoClose={2000}

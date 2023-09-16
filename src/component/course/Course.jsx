@@ -15,7 +15,7 @@ const Course = ({course,handlerSelect}) => {
         </figure>
         <div className="text-center space-y-3">
           <h2 className="font-semibold">{title}</h2>
-          <p className='text-gray-400 font-medium'>
+          <p className='text-gray-400 font-medium h-24 overflow-hidden'>
             {description}
           </p>
           {/* footer */}

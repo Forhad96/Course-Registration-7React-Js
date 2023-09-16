@@ -1,9 +1,10 @@
+
 [
   {
     "id": 1,
     "image": "https://i.ibb.co/B4Q7pDk/course-1.png",
     "title": "Introduction to C Programming",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Dive into the fundamentals of C programming with this introductory course. Learn about variables, data types, control structures, and more. Start your journey in the world of programming with C!",
     "price": 15000,
     "credit": 5
   },
@@ -11,7 +12,7 @@
     "id": 2,
     "image": "https://i.ibb.co/2jTcVFJ/course-2.png",
     "title": "Introduction to Algorithms",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Discover the fascinating world of algorithms in this course. Explore various algorithmic techniques and strategies for problem-solving. From sorting to searching, you'll gain a solid foundation in algorithms.",
     "price": 20000,
     "credit": 3
   },
@@ -19,7 +20,7 @@
     "id": 3,
     "image": "https://i.ibb.co/sgcMcb5/course-3.png",
     "title": "Introduction to C++ for DSA",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Master C++ and its applications in Data Structures and Algorithms (DSA). This course is designed to help you understand the core concepts of C++ while preparing you for advanced DSA topics.",
     "price": 25000,
     "credit": 7
   },
@@ -27,7 +28,7 @@
     "id": 4,
     "image": "https://i.ibb.co/82d3d73/course-4.png",
     "title": "Data Structure",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Delve into the world of data structures with this course. Learn how to organize and manage data efficiently. From arrays to linked lists, this course covers the essential data structures every programmer should know.",
     "price": 30000,
     "credit": 2
   },
@@ -35,7 +36,7 @@
     "id": 5,
     "image": "https://i.ibb.co/zZsrdTw/course-5.png",
     "title": "Python OOP",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Explore the world of Object-Oriented Programming (OOP) with Python. Understand the principles of encapsulation, inheritance, and polymorphism. Build robust and modular code using OOP concepts.",
     "price": 35000,
     "credit": 9
   },
@@ -43,7 +44,7 @@
     "id": 6,
     "image": "https://i.ibb.co/y0tL8Gj/course-6.png",
     "title": "Software Engineering",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Embark on a journey to become a software engineering expert. Learn about software development methodologies, design patterns, and best practices. Develop the skills needed to build high-quality software.",
     "price": 40000,
     "credit": 4
   },
@@ -51,7 +52,7 @@
     "id": 7,
     "image": "https://i.ibb.co/qsSkdmC/course-7.png",
     "title": "AWS Cloud Computing",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Get hands-on experience with Amazon Web Services (AWS) cloud computing. Learn how to deploy, manage, and scale applications in the cloud. This course is your gateway to the world of cloud technology.",
     "price": 45000,
     "credit": 8
   },
@@ -59,7 +60,7 @@
     "id": 8,
     "image": "https://i.ibb.co/yVDrLbP/course-8.png",
     "title": "Database (MySQL)",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Dive into the world of databases with a focus on MySQL. Learn how to design, query, and manage relational databases. Acquire the skills needed to work with data effectively.",
     "price": 50000,
     "credit": 6
   },
@@ -67,7 +68,7 @@
     "id": 9,
     "title": "Problem-Solving Part 1",
     "image": "https://i.ibb.co/gTbx2SR/course-9.png",
-    "description": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
+    "description": "Enhance your problem-solving abilities with this course. Explore various problem-solving techniques and strategies. Whether you're a beginner or an experienced coder, this course will sharpen your problem-solving skills.",
     "price": 55000,
     "credit": 1
   }
