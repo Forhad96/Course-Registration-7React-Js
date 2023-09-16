@@ -52,10 +52,10 @@ To use this application, follow these steps:
 
 
 ## Demo
-https://i.ibb.co/kxqsVMB/cousre-Reg.jpg
-## Screenshots
-
 ![App Screenshot](https://i.ibb.co/kxqsVMB/cousre-Reg.jpg)
+
+## Code Screenshots
+
 ![App Screenshot](https://i.ibb.co/3cVxmrM/Screenshot-162.png)
 
 
