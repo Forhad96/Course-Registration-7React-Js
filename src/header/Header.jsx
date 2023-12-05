@@ -11,7 +11,7 @@ const Header = ({
     <header className="bg-white sticky top-0 z-50">
       <div className="navbar bg-base-100 ">
         <div className="flex-1">
-          <img className="w-16" src="../assets/logo.png" alt="" />
+          <img className="w-16" src="/logo.png" alt="" />
         </div>
         <div className="flex-none md:hidden">
           <details className="dropdown dropdown-end">
